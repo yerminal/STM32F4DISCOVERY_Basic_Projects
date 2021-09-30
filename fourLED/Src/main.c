@@ -31,17 +31,15 @@ void led_state_clear(uint32_t* output_data_address){
 }
 
 void led_state_oppositer(uint32_t* output_data_address, int led){
-	if (led == 12 || led == 13 || led == 14 || led == 15)
-	{
-	uint32_t temp = *output_data_address;
-	temp &= 1 << led;
-	temp = ~(temp >> led);
-	temp &= 1;
-	*output_data_address &= ~(1 << led);
-	*output_data_address |= (temp << led);
+	if (led == 12 || led == 13 || led == 14 || led == 15){
+		uint32_t temp = *output_data_address;
+		temp &= 1 << led;
+		temp = ~(temp >> led);
+		temp &= 1;
+		*output_data_address &= ~(1 << led);
+		*output_data_address |= (temp << led);
 	}
-	else
-	{
+	else{
 		printf("led_state_oppositer: LED number %d is invalid.\n", led);
 	}
 }
