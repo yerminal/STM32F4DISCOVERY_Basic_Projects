@@ -1,0 +1,5 @@
+main.c:27:6:led_state_clear	24	static
+main.c:33:6:led_state_oppositer	24	static
+main.c:49:6:led_state_true	16	static
+main.c:58:6:led_state_false	16	static
+main.c:67:5:main	32	static
